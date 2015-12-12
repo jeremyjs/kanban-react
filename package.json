@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jjman505/kanban-react/issues"
   },
-  "homepage": "https://github.com/jjman505/kanban-react#readme"
+  "homepage": "https://github.com/jjman505/kanban-react#readme",
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
 }
