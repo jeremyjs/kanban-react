@@ -1,0 +1,24 @@
+{
+  "name": "kanban",
+  "version": "0.1.0",
+  "description": "A simple kanban app built with webpack and react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjman505/kanban-react.git"
+  },
+  "keywords": [
+    "kanban",
+    "react",
+    "webpack"
+  ],
+  "author": "Jeremy Meyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjman505/kanban-react/issues"
+  },
+  "homepage": "https://github.com/jjman505/kanban-react#readme"
+}
