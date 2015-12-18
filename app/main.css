@@ -1,5 +1,14 @@
 
+@-webkit-keyframes pulse {
+  0% { background-color: #45ceef; }
+  25% { background-color: #fff5a5; }
+  50% { background-color: #ffd4da; }
+  75% { background-color: #99d2e4; }
+  100% { background-color: #d8cab4; }
+}
+
 body {
   font-family: helvetica;
-  background: cornsilk;
+  background-color: #45ceef;
+  -webkit-animation: pulse 5s infinite alternate;
 }
