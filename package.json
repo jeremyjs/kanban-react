@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jjman505/kanban-react#readme",
   "devDependencies": {
+    "babel-loader": "^5.4.0",
     "css-loader": "^0.23.0",
     "html-webpack-plugin": "^1.7.0",
     "jshint": "^2.8.0",
