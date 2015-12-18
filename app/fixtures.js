@@ -13,7 +13,7 @@ module.exports = {
     },
     {
       _id: uuid(),
-      title: 'Do laundry',
+      title: 'Get shwifty',
     },
   ],
 };
