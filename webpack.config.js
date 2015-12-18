@@ -10,6 +10,8 @@ const PATHS = {
   build: path.resolve(__dirname, 'build'),
 };
 
+process.env.BABEL_ENV = TARGET;
+
 var HtmlKanbanPlugin = new HtmlWebpackPlugin({ title: 'Kanban' });
 var HMR_Plugin = new webpack.HotModuleReplacementPlugin();
 
