@@ -6,7 +6,7 @@ import { tasks } from '../fixtures.js';
 export default class App extends React.Component {
   render () {
     return (
-      <div>
+      <div className="app">
         <TaskList tasks={tasks}/>
       </div>
     );

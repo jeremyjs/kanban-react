@@ -6,12 +6,12 @@ export default class TaskList extends React.Component {
   render () {
     const tasks = this.props.tasks;
 
-    return <ul>{tasks.map(this.renderTask)}</ul>;
+    return <ul className="task-list">{tasks.map(this.renderTask)}</ul>;
   };
 
   renderTask (task) {
     return (
-      <li key={task._id}>
+      <li className="task-list-item" key={task._id}>
         <Task title={task.title} />
       </li>
     );
