@@ -3,6 +3,13 @@ import React from 'react';
 import TaskList from './TaskList.jsx';
 import fixtures, { Task } from '../fixtures.js';
 
+function setTitle (_id, title) {
+  return (task) => {
+    if(task._id === _id) task.title = title;
+    return task;
+  }
+}
+
 export default class App extends React.Component {
   constructor (props) {
     super(props);
@@ -18,7 +25,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <button className="add-task" onClick={this.addTask}>+</button>
-        <TaskList tasks={tasks}/>
+        <TaskList tasks={tasks} onEdit={this.editTask} />
       </div>
     );
   };
@@ -29,5 +36,11 @@ export default class App extends React.Component {
     const newTasks = [newTask];
     const tasks    = oldTasks.concat(newTasks);
     this.setState({ tasks: tasks });
+  };
+
+  editTask = (taskId, title) => {
+    const oldTasks = this.state.tasks;
+    const tasks = oldTasks.map(setTitle(taskId, title));
+    this.setState({ tasks });
   };
 };

@@ -30,7 +30,7 @@ export default class Task extends React.Component {
   };
 
   saveEdits = (e) => {
-    // this.props.onSaveEdits(e.target.value);
+    this.props.onEdit(e.target.value);
     this.setState({ isEditing: false });
   };
 }
