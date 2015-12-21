@@ -17,13 +17,13 @@ export default class App extends React.Component {
 
     return (
       <div className="app">
-        <button className="add-note" onClick={this.addNote}>+</button>
+        <button className="add-task" onClick={this.addTask}>+</button>
         <TaskList tasks={tasks}/>
       </div>
     );
   };
 
-  addNote = () => {
+  addTask = () => {
     const oldTasks = this.state.tasks;
     const newTask  = new Task('New task');
     const newTasks = [newTask];
