@@ -35,7 +35,7 @@ export default class App extends React.Component {
     const newTask  = new Task('New task');
     const newTasks = [newTask];
     const tasks    = oldTasks.concat(newTasks);
-    this.setState({ tasks: tasks });
+    this.setState({ tasks });
   };
 
   editTask = (taskId, title) => {
