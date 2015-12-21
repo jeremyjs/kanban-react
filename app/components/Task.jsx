@@ -20,7 +20,16 @@ export default class Task extends React.Component {
   };
 
   renderTask = () => {
-    return <div className="task" onClick={this.edit}>{this.props.title}</div>;
+    return (
+      <div className="task">
+        <span className="title" onClick={this.edit}>{this.props.title}</span>
+        {this.props.onRemove ? this.renderRemove() : null}
+      </div>
+    );
+  };
+
+  renderRemove = () => {
+    return <button className="remove" onClick={this.props.onRemove}>x</button>;
   };
 
   edit = () => this.setState({ isEditing: true });

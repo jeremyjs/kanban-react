@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <button className="add-task" onClick={this.addTask}>+</button>
-        <TaskList tasks={tasks} onEdit={this.editTask} />
+        <TaskList tasks={tasks} onEdit={this.editTask} onRemove={this.removeTask} />
       </div>
     );
   };
@@ -41,6 +41,12 @@ export default class App extends React.Component {
   editTask = (taskId, title) => {
     const oldTasks = this.state.tasks;
     const tasks = oldTasks.map(setTitle(taskId, title));
+    this.setState({ tasks });
+  };
+
+  removeTask = (taskId) => {
+    const oldTasks = this.state.tasks;
+    const tasks = oldTasks.filter((t) => t._id !== taskId);
     this.setState({ tasks });
   };
 };

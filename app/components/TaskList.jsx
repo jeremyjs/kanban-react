@@ -12,9 +12,10 @@ export default class TaskList extends React.Component {
   renderTask (task) {
     const _id = task._id;
     const onEdit = this.props.onEdit.bind(null, task._id);
+    const onRemove = this.props.onRemove.bind(null, task._id);
     return (
       <li className="task-list-item" key={task._id}>
-        <Task title={task.title} onEdit={onEdit} />
+        <Task title={task.title} onEdit={onEdit} onRemove={onRemove} />
       </li>
     );
   };
